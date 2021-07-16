@@ -10,27 +10,36 @@
     <td><label>CPF </label></td>
     <td><input [(ngModel)]="aluno.cpf" ></td>
     <td *ngIf="cpfduplicado">
-      Já existe um aluno com esse CPF
+      Já existe um aluno com esse CPF ou Login
     </td>
  </tr>
  <tr>
-    <td><label>e-mail </label></td>
+    <td><label>E-mail </label></td>
     <td><input [(ngModel)]="aluno.email" ></td>
  </tr>
+ <tr>
+   <td><label>login </label></td>
+   <td><input [(ngModel)]="aluno.login" ></td>
+   <td *ngIf="loginduplicado">
+     Já existe um aluno com esse Login
+   </td>
+</tr>
+
  </table>
 
   <table>
  <tr *ngIf="alunos.length > 0">
     <th>Nome</th>
     <th>CPF</th>
-    <th>e-mail</th>
-    <th>login</th>
+    <th>E-mail</th>
+    <th>Login</th>
  </tr>
  <tr *ngFor="let a of alunos">
-    <td>{{a.nome}}</td>
+    <td>{{a.nome}}</td> 
     <td>{{a.cpf}}</td>
     <td>{{a.email}}</td>
     <td>{{a.login}}</td>
+    <td><button (click)="remover(a.cpf)">Remover</button></td>
  </tr>
  </table>
 

@@ -34,5 +34,11 @@ export class AlunoService {
                  retry(2)
                );
   }
+   remover(cpf: string): Observable<boolean> {
+    return this.http.delete<any>(this.taURL + "/aluno/" + cpf)
+      .pipe(
+        retry(2)
+      );
+  }
 
 }
