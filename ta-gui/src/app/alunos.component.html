@@ -34,15 +34,9 @@
     <th>E-mail</th>
     <th>Login</th>
  </tr>
-<<<<<<< HEAD
- <tr *ngFor="let a of alunos">
-    <td>{{a.nome}}</td> 
-    <td>{{a.cpf}}</td>
-=======
  <tr *ngFor="let a of alunos" name="alunolist">
     <td name="nomelist">{{a.nome}}</td>
     <td name="cpflist">{{a.cpf}}</td>
->>>>>>> d4cfb3d (adicao de nomes nos elementos HTML a serem referenciados pelos testes)
     <td>{{a.email}}</td>
     <td>{{a.login}}</td>
     <td><button (click)="remover(a.cpf)">Remover</button></td>
